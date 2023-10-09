@@ -1,3 +1,12 @@
+
+interface BoxPropsInterface {
+  id: string;
+  height: number;
+  width: number;
+  backgroundColor: string;
+  remove: Function;
+}
+
 /** Colored box presentation
  *
  * Props:
@@ -10,10 +19,10 @@
  * BoxList -> Box
  */
 
-function Box({ id, width = 5, height = 5, backgroundColor, remove }) {
+function Box({ id, width = 5, height = 5, backgroundColor, remove }: BoxPropsInterface): React.JSX.Element {
 
   /** Remove a box. */
-  function handleRemove() {
+  function handleRemove(): void {
     remove(id);
   }
 

@@ -1,6 +1,6 @@
 import BoxList from "./BoxList";
 
-function App() {
+function App(): React.JSX.Element {
   return (
     <div>
       <BoxList />
